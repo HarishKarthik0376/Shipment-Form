@@ -137,7 +137,7 @@ function saveEnrollment() {
     alert(putReqStr); 
     jQuery.ajaxSetup({async: false}); 
     var resultObj = executeCommand(putReqStr, 
-        "http://api.login2explore.com:5577", "/api/iml"); 
+        "https://api.login2explore.com:5577", "/api/iml"); 
     alert(JSON.stringify(resultObj)); 
     jQuery.ajaxSetup({async: true}); 
     resetForm(); 
@@ -147,7 +147,7 @@ function getshipment(){
     var shipnoObj=getshipmentno();
     var getRequest=createGET_BY_KEYRequest("90932111|-31949221610822511|90962071", "SHIPMENT-DB", "SHIPMENT-TABLE",shipnoObj);
     jQuery.ajaxSetup({async:false});
-    var resultObj = executeCommand(getRequest, "http://api.login2explore.com:5577", "/api/irl"); 
+    var resultObj = executeCommand(getRequest, "https://api.login2explore.com:5577", "/api/irl"); 
     jQuery.ajaxSetup({async: true}); 
     if(resultObj.status === 400){
         $("#submitbtn").prop("disabled",false); 
@@ -167,7 +167,7 @@ function changedata()
     jsonchg = validateAndGetFormData();
     var updatereq = createUPDATERecordRequest("90932111|-31949221610822511|90962071",jsonchg,"SHIPMENT-DB","SHIPMENT-TABLE",localStorage.getItem('recno'));
     jQuery.ajaxSetup({async:false});
-    var resjsonobj = executeCommand(updatereq,"http://api.login2explore.com:5577", "/api/iml");
+    var resjsonobj = executeCommand(updatereq,"https://api.login2explore.com:5577", "/api/iml");
     jQuery.ajaxSetup({async:true});
     console.log(resjsonobj);
     resetForm();
