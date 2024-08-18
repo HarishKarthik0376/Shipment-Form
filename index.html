@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment-Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <form class="shipment-form">
+            <h2>Shipment Details</h2>
+
+            <label for="shipment-no">Shipment No.</label>
+            <input type="text" id="shipment-no" name="shipment-no" onchange="getshipment()" placeholder="Enter shipment number" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+
+            <label for="source">Source</label>
+            <input type="text" id="source" name="source" placeholder="Enter source" required>
+
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+
+            <label for="shipping-date">Shipping Date</label>
+            <input type="date" id="shipping-date" name="shipping-date" required>
+
+            <label for="expected-delivery-date">Expected Delivery Date</label>
+            <input type="date" id="expected-delivery-date" name="expected-delivery-date" required>
+            <div class="btns">
+            <input class="btn" type="submit" id="submitbtn" onclick="saveEnrollment()" value="Submit" disabled>
+            <input class="btn" type="submit" id="changebtn" onclick="changedata()" value="Change" disabled >
+            <input class="btn" type="submit" id="resetbtn" onclick="resetForm()" value="Reset" disabled>
+        </div>
+        </form>
+    </div>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
