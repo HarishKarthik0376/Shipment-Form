@@ -5,9 +5,7 @@
 The Shipment Management Form is a web-based tool designed to manage and store shipment data in the SHIPMENT-TABLE relation of the DELIVERY-DB database. This form captures essential details such as Shipment Number, Description, Source, Destination, Shipping Date, and Expected Delivery Date. It includes features for validating input data, retrieving existing shipment records, and updating shipment details, ensuring efficient management of shipment information.
 
 ## Video
-<video>
 https://github.com/user-attachments/assets/6946c530-dd99-48ed-89c0-88be3e2568f9
-</video>
 
 ## Benefits of Using JsonPowerDB
 
